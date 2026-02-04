@@ -1,0 +1,44 @@
+{
+  // TypeScript config for the frontend app (Vite + React)
+  // Keep server code in a separate tsconfig (e.g. tsconfig.server.json)
+  "compilerOptions": {
+    "types": ["vitest/globals", "vite/client"],
+
+    /* Language + library targets */
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+
+    /* Module / bundler settings */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "useDefineForClassFields": true,
+
+    /* Interop / module conveniences */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+
+    /* Strictness and linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Project paths */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+
+  /* Only include frontend source files */
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "server"]
+}
